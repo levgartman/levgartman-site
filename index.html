@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lev Gartman &#8212; Writer, Producer &amp; Creative Director</title>
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<meta name="description" content="Lev Gartman is a writer, producer, and creative director with 20 years of experience creating launch campaigns, brand narratives, and video content. From Mr. Robot to BravoCon, from Novo Nordisk to the intersection of brand storytelling and AI.">
+<meta name="keywords" content="Lev Gartman, creative director, writer producer, brand storytelling, AI content, launch campaigns, NBCUniversal, Bravo, USA Network, Mr. Robot, BravoCon, Novo Nordisk">
+<meta name="author" content="Lev Gartman">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://levgartman.com/">
+<meta property="og:title" content="Lev Gartman &#8212; Writer, Producer &amp; Creative Director">
+<meta property="og:description" content="20 years of launch campaigns, brand narratives, and video content. From Mr. Robot to BravoCon. Now working at the intersection of brand storytelling and AI.">
+<meta property="og:site_name" content="Lev Gartman">
+<meta property="og:image" content="https://levgartman.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lev Gartman &#8212; Writer, Producer &amp; Creative Director">
+<meta name="twitter:description" content="20 years of launch campaigns, brand narratives, and video content. From Mr. Robot to BravoCon. Now working at the intersection of brand storytelling and AI.">
+<meta name="twitter:image" content="https://levgartman.com/og-image.png">
+<link rel="canonical" href="https://levgartman.com/">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PT4HDNYND9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PT4HDNYND9');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0e0e;
+    --surface: #161616;
+    --border: #2a2a2a;
+    --text: #e8e4dc;
+    --muted: #7a7570;
+    --accent: #c8b89a;
+    --accent-dim: #8a7d6a;
+    --white: #f5f1eb;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 28px 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.4s ease, border-color 0.4s ease;
+    border-bottom: 1px solid transparent;
+  }
+  nav.scrolled {
+    background: rgba(14,14,14,0.97);
+    backdrop-filter: blur(12px);
+    border-bottom-color: var(--border);
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.05em;
+    color: var(--white);
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 40px; list-style: none; }
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 56px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 55% 45% at 75% 35%, rgba(200,184,154,0.07) 0%, transparent 60%),
+      radial-gradient(ellipse 35% 55% at 15% 85%, rgba(200,184,154,0.03) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .hero-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.2s ease forwards;
+  }
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(4.5rem, 11vw, 10rem);
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    opacity: 0;
+    animation: fadeUp 0.8s 0.35s ease forwards;
+  }
+  .hero-name em { font-style: italic; color: var(--accent); }
+  .hero-tagline {
+    margin-top: 36px;
+    max-width: 600px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.55s ease forwards;
+  }
+  .hero-tagline p {
+    font-size: 1.1rem;
+    color: var(--muted);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+  .hero-tagline p + p { margin-top: 10px; }
+  .hero-tagline strong { color: var(--white); font-weight: 400; }
+  .hero-scroll {
+    position: absolute;
+    bottom: 44px; right: 56px;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 12px;
+    opacity: 0;
+    animation: fadeIn 1s 1.3s ease forwards;
+  }
+  .hero-scroll span {
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    writing-mode: vertical-rl;
+  }
+  .scroll-line {
+    width: 1px; height: 56px;
+    background: linear-gradient(to bottom, var(--accent-dim), transparent);
+    animation: pulse 2.2s ease-in-out infinite;
+  }
+  section { padding: clamp(64px, 10vw, 128px) clamp(24px, 5vw, 56px); }
+  .section-label {
+    font-size: 0.66rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 72px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .section-label::after {
+    content: '';
+    display: block;
+    height: 1px; width: 40px;
+    background: var(--accent-dim);
+  }
+  .about { background: var(--bg); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr min(340px, 35%);
+    gap: clamp(32px, 5vw, 80px);
+    align-items: start;
+    max-width: 1200px;
+    width: 100%;
+  }
+  .about-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 3.2vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.18;
+    color: var(--white);
+    margin-bottom: 36px;
+  }
+  .about-headline em { font-style: italic; color: var(--accent); }
+  .about-body {
+    font-size: 0.98rem;
+    color: var(--muted);
+    line-height: 1.9;
+    margin-bottom: 22px;
+  }
+  .about-body strong { color: var(--text); font-weight: 400; }
+  .about-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(16px, 3vw, 36px);
+    margin-top: 56px;
+    padding-top: 48px;
+    border-top: 1px solid var(--border);
+  }
+  .stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .stat-label {
+    font-size: 0.73rem;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+  .about-photo-col { position: relative; }
+  .about-photo-wrap { position: relative; width: 100%; }
+  .about-photo-wrap img {
+    width: 100%;
+    display: block;
+    filter: grayscale(15%) contrast(1.04);
+  }
+  .about-photo-frame {
+    position: absolute; inset: 0;
+    border: 1px solid var(--border);
+    transform: translate(14px, 14px);
+    pointer-events: none;
+    z-index: -1;
+  }
+  .work { background: var(--surface); }
+  .work-intro {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--muted);
+    max-width: 680px;
+    line-height: 1.45;
+    margin-bottom: 88px;
+  }
+  .work-intro strong { color: var(--white); font-style: normal; font-weight: 700; }
+  .projects { display: flex; flex-direction: column; }
+  .project {
+    display: grid;
+    grid-template-columns: 72px 1fr 140px;
+    gap: 40px;
+    align-items: start;
+    padding: 44px 0;
+    border-top: 1px solid var(--border);
+    position: relative;
+  }
+  .project:last-child { border-bottom: 1px solid var(--border); }
+  .project:hover { background: rgba(200,184,154,0.02); }
+  .project:hover .project-num { color: var(--accent); }
+  .project:hover .project-title { color: var(--white); }
+  .project-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.72rem;
+    color: var(--border);
+    padding-top: 8px;
+    transition: color 0.2s;
+    user-select: none;
+  }
+  .project-eyebrow {
+    font-size: 0.66rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent-dim);
+    margin-bottom: 12px;
+  }
+  .project-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.15;
+    margin-bottom: 16px;
+    transition: color 0.2s;
+  }
+  .project-desc {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.8;
+    max-width: 600px;
+  }
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 22px;
+  }
+  .tag {
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-dim);
+    border: 1px solid var(--border);
+    padding: 4px 10px;
+  }
+  .project-meta { text-align: right; padding-top: 8px; }
+  .project-metric {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .project-metric-label {
+    font-size: 0.63rem;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+  .carousel { margin-top: 28px; position: relative; }
+  .carousel-track-wrap { overflow: hidden; border: 1px solid var(--border); }
+  .carousel-track { display: flex; transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1); }
+  .carousel-slide { min-width: 100%; position: relative; aspect-ratio: 16/9; background: var(--bg); }
+  .carousel-slide iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+  .carousel-caption { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.06em; margin-top: 10px; padding: 0 2px; }
+  .carousel-controls { display: flex; align-items: center; gap: 16px; margin-top: 14px; }
+  .carousel-btn {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    width: 32px; height: 32px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+  .carousel-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .carousel-dots { display: flex; gap: 6px; align-items: center; }
+  .carousel-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--border);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .carousel-dot.active { background: var(--accent); transform: scale(1.3); }
+  .carousel-label { font-size: 0.68rem; color: var(--muted); margin-left: auto; letter-spacing: 0.06em; }
+  .ai-section { background: var(--bg); border-top: 1px solid var(--border); }
+  .ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 96px; align-items: start; }
+  .ai-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.18;
+    margin-bottom: 36px;
+  }
+  .ai-headline em { font-style: italic; color: var(--accent); }
+  .ai-body { font-size: 0.98rem; color: var(--muted); line-height: 1.9; margin-bottom: 22px; }
+  .ai-body strong { color: var(--text); font-weight: 400; }
+  .ai-tools { margin-top: 48px; padding-top: 44px; border-top: 1px solid var(--border); }
+  .ai-tools-label { font-size: 0.66rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .tools-list { display: flex; flex-wrap: wrap; gap: 10px; }
+  .tool-chip {
+    font-size: 0.73rem;
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    letter-spacing: 0.03em;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .tool-chip:hover { border-color: var(--accent-dim); color: var(--accent); }
+  .ai-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 52px;
+    position: relative;
+    overflow: hidden;
+  }
+  .ai-card::before {
+    content: '"';
+    font-family: 'Playfair Display', serif;
+    font-size: 10rem;
+    color: rgba(200,184,154,0.06);
+    position: absolute;
+    top: -16px; left: 28px;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .ai-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--text);
+    line-height: 1.65;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 1;
+  }
+  .ai-quote-sub { font-size: 0.88rem; color: var(--muted); line-height: 1.75; }
+  .ai-quote-sub strong { color: var(--text); font-weight: 400; }
+  .contact { background: var(--surface); border-top: 1px solid var(--border); text-align: center; }
+  .contact-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 0.93;
+    margin-bottom: 44px;
+  }
+  .contact-headline em { font-style: italic; color: var(--accent); }
+  .contact-sub { font-size: 0.98rem; color: var(--muted); margin-bottom: 56px; max-width: 420px; margin-left: auto; margin-right: auto; line-height: 1.75; }
+  .contact-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+  .contact-link {
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    padding: 15px 30px;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+  }
+  .contact-link:hover { border-color: var(--accent); color: var(--accent); }
+  .contact-link.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); font-weight: 500; }
+  .contact-link.primary:hover { background: transparent; color: var(--accent); }
+  footer {
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    padding: 28px 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-name { font-family: 'Playfair Display', serif; font-size: 0.85rem; color: var(--muted); }
+  .footer-right { font-size: 0.7rem; color: var(--border); letter-spacing: 0.08em; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.75s ease, transform 0.75s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.32s; }
+  @media (max-width: 860px) {
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    .about-photo-col { order: -1; max-width: 280px; }
+    .about-stats { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 680px) {
+    nav { padding: 22px 24px; }
+    .nav-links { display: none; }
+    .hero { padding: 0 24px 72px; }
+    .ai-grid { grid-template-columns: 1fr; gap: 48px; }
+    .project { grid-template-columns: 48px 1fr; }
+    .project-meta { display: none; }
+    footer { padding: 24px; flex-direction: column; gap: 8px; text-align: center; }
+    .hero-scroll { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#top" class="nav-logo">LG</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#ai">AI</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <p class="hero-label">Writer · Producer · Creative Director</p>
+  <h1 class="hero-name">Lev<br><em>Gartman</em></h1>
+  <div class="hero-tagline">
+    <p>I write and direct content that makes people <strong>feel something</strong> about a product. From hacker manifestos to Real Housewives.</p>
+    <p>Now working at the intersection of <strong>brand storytelling and AI.</strong></p>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <p class="section-label reveal">01 / About</p>
+  <div class="about-grid">
+    <div>
+      <h2 class="about-headline reveal">An engineer who<br>learned to <em>tell stories.</em><br>A storyteller who<br>never forgot the math.</h2>
+      <p class="about-body reveal reveal-delay-1">
+        I spent 20 years in the business of making people care. At <strong>NBCUniversal</strong>, I ran creative for Bravo, USA Network, and SYFY WIRE. I wrote and directed launch campaigns that had to cut through in an impossibly crowded landscape. Not with bigger budgets. With better ideas.
+      </p>
+      <p class="about-body reveal reveal-delay-1">
+        My background is in engineering (University of Michigan, Industrial and Operations Engineering), which sounds like a strange detour into creative work until you realize that <strong>the best campaigns are systems:</strong> inputs, feedback loops, outputs, designed to move specific people in specific directions. I just happen to care about the prose.
+      </p>
+      <p class="about-body reveal reveal-delay-2">
+        Today I'm working with <strong>Novo Nordisk</strong>, one of the most talked-about brands in the world right now, producing video content and helping build out the in-house production team. I also introduced AI video capability, a first for the department, and helped build out the in-house production team from the ground up.
+      </p>
+      <div class="about-stats reveal reveal-delay-3">
+        <div>
+          <div class="stat-number">427M</div>
+          <div class="stat-label">Media impressions,<br>Mr. Robot launch experience</div>
+        </div>
+        <div>
+          <div class="stat-number">113M</div>
+          <div class="stat-label">Cross-platform engagements,<br>BravoCon 2022</div>
+        </div>
+        <div>
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Years launching things<br>people actually watched</div>
+        </div>
+        <div>
+          <div class="stat-number">$2.8M</div>
+          <div class="stat-label">Enterprise value created<br>at Novo Nordisk</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-photo-col reveal reveal-delay-2">
+      <div class="about-photo-wrap">
+        <img src="lev-gartman.jpg" alt="Lev Gartman">
+        <div class="about-photo-frame"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <p class="section-label reveal">02 / Selected Work</p>
+  <p class="work-intro reveal">Launch campaigns, brand storytelling, and <strong>the rare project where you invent a new format</strong> and somehow it works.</p>
+  <div class="projects">
+
+    <div class="project reveal">
+      <div class="project-num">01</div>
+      <div class="project-content">
+        <p class="project-eyebrow">USA Network, Campaign</p>
+        <h3 class="project-title">Mr. Robot: The Launch Experience</h3>
+        <p class="project-desc">For the final season of Mr. Robot, we didn't just promote a TV show. We built an alternate reality. The Comic-Con launch experience treated the show's universe as real: coded messaging and immersive environments for an audience that showed up for the details. At New York Comic-Con, it generated 427M media impressions and 22.9M social impressions. The dec0d3d documentary, a companion piece to the series, won a Clio Award.</p>
+        <div class="project-tags">
+          <span class="tag">Launch Experience</span>
+          <span class="tag">Experiential</span>
+          <span class="tag">Documentary</span>
+          <span class="tag">Clio Award</span>
+        </div>
+        <div class="carousel" data-carousel>
+          <div class="carousel-track-wrap">
+            <div class="carousel-track">
+              <div class="carousel-slide"><iframe src="https://player.vimeo.com/video/665434704" allowfullscreen loading="lazy"></iframe></div>
+              <div class="carousel-slide"><iframe src="https://player.vimeo.com/video/176633054" allowfullscreen loading="lazy"></iframe></div>
+              <div class="carousel-slide"><iframe src="https://player.vimeo.com/video/131574079" allowfullscreen loading="lazy"></iframe></div>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-btn prev">&#8592;</button>
+            <div class="carousel-dots">
+              <div class="carousel-dot active" data-index="0"></div>
+              <div class="carousel-dot" data-index="1"></div>
+              <div class="carousel-dot" data-index="2"></div>
+            </div>
+            <button class="carousel-btn next">&#8594;</button>
+            <span class="carousel-label" data-counter>1 / 3</span>
+          </div>
+          <p class="carousel-caption" data-caption>eCoin Event: New York Comic-Con Activation</p>
+        </div>
+      </div>
+      <div class="project-meta">
+        <div class="project-metric">427M</div>
+        <div class="project-metric-label">media<br>impressions</div>
+      </div>
+    </div>
+
+    <div class="project reveal">
+      <div class="project-num">02</div>
+      <div class="project-content">
+        <p class="project-eyebrow">NBCUniversal, Brand and Live Event</p>
+        <h3 class="project-title">Bravo: From Network to Cultural Force</h3>
+        <p class="project-desc">Over three years as Creative Director, I helped take Bravo to the #1 entertainment network for women. That meant building the creative system: franchise launch campaigns for Real Housewives, Summer House, and more, along with BravoCon, where 30,000+ fans showed up because we fueled their fandom with over-the-top drama and excessive glam. On-air content, event programming, and brand identity work across 20 to 25 campaigns a year. The standard was simple: it had to be fabulous.</p>
+        <div class="project-tags">
+          <span class="tag">Brand Identity</span>
+          <span class="tag">Launch Campaigns</span>
+          <span class="tag">Live Event</span>
+          <span class="tag">Team of 9</span>
+        </div>
+        <div class="carousel" data-carousel>
+          <div class="carousel-track-wrap">
+            <div class="carousel-track">
+              <div class="carousel-slide"><iframe src="https://player.vimeo.com/video/835965109" allowfullscreen loading="lazy"></iframe></div>
+              <div class="carousel-slide"><iframe src="https://player.vimeo.com/video/835966916" allowfullscreen loading="lazy"></iframe></div>
+              <div class="carousel-slide"><iframe src="https://player.vimeo.com/video/664898613" allowfullscreen loading="lazy"></iframe></div>
+              <div class="carousel-slide"><iframe src="https://player.vimeo.com/video/794881105" allowfullscreen loading="lazy"></iframe></div>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-btn prev">&#8592;</button>
+            <div class="carousel-dots">
+              <div class="carousel-dot active" data-index="0"></div>
+              <div class="carousel-dot" data-index="1"></div>
+              <div class="carousel-dot" data-index="2"></div>
+              <div class="carousel-dot" data-index="3"></div>
+            </div>
+            <button class="carousel-btn next">&#8594;</button>
+            <span class="carousel-label" data-counter>1 / 4</span>
+          </div>
+          <p class="carousel-caption" data-caption>Bravo Moments Brand Spot</p>
+        </div>
+      </div>
+      <div class="project-meta">
+        <div class="project-metric">113M</div>
+        <div class="project-metric-label">cross-platform<br>engagements</div>
+      </div>
+    </div>
+
+    <div class="project reveal">
+      <div class="project-num">03</div>
+      <div class="project-content">
+        <p class="project-eyebrow">USA Network, Franchise Campaigns</p>
+        <h3 class="project-title">Suits, SVU and the Art of Staying #1</h3>
+        <p class="project-desc">For nearly a decade, USA Network was the #1 cable network. Staying there meant launching every season of Suits, Law and Order: SVU, Psych, and a dozen others, with campaigns that had to feel fresh after years of familiarity. I wrote and produced across all of it: promos, key art, digital content, and the in-house content agency I built to handle the volume without sacrificing quality.</p>
+        <div class="project-tags">
+          <span class="tag">Multi-Season Campaigns</span>
+          <span class="tag">Franchise Strategy</span>
+          <span class="tag">In-House Agency</span>
+        </div>
+      </div>
+      <div class="project-meta">
+        <div class="project-metric">#1</div>
+        <div class="project-metric-label">cable network<br>status maintained</div>
+      </div>
+    </div>
+
+    <div class="project reveal">
+      <div class="project-num">04</div>
+      <div class="project-content">
+        <p class="project-eyebrow">Novo Nordisk, Video and Executive Content</p>
+        <h3 class="project-title">High-Stakes Storytelling at Global Scale</h3>
+        <p class="project-desc">Working with Novo Nordisk means producing content where every word is reviewed, every claim has to be accurate, and the storytelling still has to land. I produce executive messaging, internal communications, and video content for one of the most-watched brands in the world right now. I also introduced AI video capability, a first for the department, and helped build out the in-house production team from the ground up.</p>
+        <div class="project-tags">
+          <span class="tag">Executive Content</span>
+          <span class="tag">AI Video</span>
+          <span class="tag">Video Production</span>
+          <span class="tag">Studio Build-Out</span>
+        </div>
+      </div>
+      <div class="project-meta">
+        <div class="project-metric">$2.8M</div>
+        <div class="project-metric-label">enterprise<br>value created</div>
+      </div>
+    </div>
+
+    <div class="project reveal">
+      <div class="project-num">05</div>
+      <div class="project-content">
+        <p class="project-eyebrow">USA Network / NBC, Because Why Not</p>
+        <h3 class="project-title">Dogs. Obviously.</h3>
+        <p class="project-desc">Barknado. American Ninja Warrior: Puppy vs. Puppy. The Beverly Hills Dog Show. Not every project has to be a meditation on the human condition. Some of the best creative work is finding the exact right tone for something inherently ridiculous and committing to it completely. These did well. The puppies were professionals.</p>
+        <div class="project-tags">
+          <span class="tag">Barknado</span>
+          <span class="tag">Beverly Hills Dog Show</span>
+          <span class="tag">American Ninja Warrior: PvP</span>
+        </div>
+        <div class="carousel" data-carousel>
+          <div class="carousel-track-wrap">
+            <div class="carousel-track">
+              <div class="carousel-slide"><iframe src="https://player.vimeo.com/video/228669283" allowfullscreen loading="lazy"></iframe></div>
+              <div class="carousel-slide"><iframe src="https://player.vimeo.com/video/264455014" allowfullscreen loading="lazy"></iframe></div>
+              <div class="carousel-slide"><iframe src="https://player.vimeo.com/video/218477226" allowfullscreen loading="lazy"></iframe></div>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-btn prev">&#8592;</button>
+            <div class="carousel-dots">
+              <div class="carousel-dot active" data-index="0"></div>
+              <div class="carousel-dot" data-index="1"></div>
+              <div class="carousel-dot" data-index="2"></div>
+            </div>
+            <button class="carousel-btn next">&#8594;</button>
+            <span class="carousel-label" data-counter>1 / 3</span>
+          </div>
+          <p class="carousel-caption" data-caption>Barknado</p>
+        </div>
+      </div>
+      <div class="project-meta">
+        <div class="project-metric">&#x1F415;</div>
+        <div class="project-metric-label">such good<br>boys.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="ai-section" id="ai">
+  <p class="section-label reveal">03 / On AI</p>
+  <div class="ai-grid">
+    <div>
+      <h2 class="ai-headline reveal">Not a feature.<br>A <em>new way<br>to work.</em></h2>
+      <p class="ai-body reveal reveal-delay-1">
+        I've been working with AI tools daily for long enough to have opinions about them. <strong>Claude, Gemini, Copilot, Midjourney, Runway, Veo</strong>. I use them the way a good writer uses a thesaurus: to accelerate craft, not a substitute for having something to say.
+      </p>
+      <p class="ai-body reveal reveal-delay-1">
+        At Novo Nordisk, I built workflows that cut production timelines significantly while maintaining the quality bar a regulated, highly visible industry demands. I introduced AI video to a team that had never used it. The tools handle the mechanical. I handle the judgment calls. That's the only split that makes sense.
+      </p>
+      <p class="ai-body reveal reveal-delay-2">
+        The hardest problem in this space isn't the technology. <strong>It's the narrative.</strong> People need help understanding what these tools actually are, what they're genuinely capable of, and why any of it matters to them. That's a creative problem. That's my problem.
+      </p>
+      <div class="ai-tools reveal reveal-delay-2">
+        <p class="ai-tools-label">Daily toolkit</p>
+        <div class="tools-list">
+          <span class="tool-chip">Claude</span>
+          <span class="tool-chip">Gemini</span>
+          <span class="tool-chip">Copilot</span>
+          <span class="tool-chip">Midjourney</span>
+          <span class="tool-chip">Runway</span>
+          <span class="tool-chip">Veo</span>
+          <span class="tool-chip">Firefly</span>
+          <span class="tool-chip">Imagen</span>
+        </div>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-2">
+      <div class="ai-card">
+        <p class="ai-quote">The best AI-assisted work looks indistinguishable from work that wasn't. That's the goal. Not just faster and cheaper, but genuinely better. Work that wouldn't have existed without it.</p>
+        <p class="ai-quote-sub">
+          I'm currently completing the <strong>Curious Refuge AI filmmaking curriculum</strong>, one of the more rigorous and creatively focused programs in the space. Beyond certification, I've shipped real work with these tools across entertainment, pharmaceutical, and brand contexts, and I know where they help and where they embarrass you.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="contact-headline reveal">Let's make<br>something <em>worth<br>talking about.</em></h2>
+  <p class="contact-sub reveal reveal-delay-1">Based in the New York City area.</p>
+  <div class="contact-links reveal reveal-delay-2">
+    <a href="#" class="contact-link primary" id="email-link">lev.gartman@gmail.com</a>
+<script>
+  (function(){var e='lev.gartman'+'@'+'gmail.com';var a=document.getElementById('email-link');a.href='mailto:'+e;a.textContent=e;})();
+</script>
+    <a href="https://www.linkedin.com/in/levgartman/" target="_blank" class="contact-link">LinkedIn</a>
+    <a href="tel:4045583102" class="contact-link">(404) 558-3102</a>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-name">Lev Gartman</span>
+  <span class="footer-right">Writer · Producer · Creative Director</span>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  const carouselCaptions = [
+    ['eCoin Event: New York Comic-Con Activation', 'dec0d3d: Clio Award-Winning Documentary', 'Christian Slater EPK'],
+    ['Bravo Moments Brand Spot', 'The Real Housewives Franchise', 'Potomac for Life ft. Nicki Minaj', 'BravoCon 2022 Same-Day Look Live'],
+    [],
+    [],
+    ['Barknado', 'American Ninja Warrior: Puppy vs. Puppy', 'The Beverly Hills Dog Show']
+  ];
+
+  document.querySelectorAll('[data-carousel]').forEach((carousel, idx) => {
+    const track = carousel.querySelector('.carousel-track');
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const dots = carousel.querySelectorAll('.carousel-dot');
+    const counter = carousel.querySelector('[data-counter]');
+    const caption = carousel.querySelector('[data-caption]');
+    const total = slides.length;
+    let current = 0;
+    const captions = carouselCaptions[idx] || [];
+
+    function goTo(index) {
+      current = (index + total) % total;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+      if (counter) counter.textContent = `${current + 1} / ${total}`;
+      if (caption && captions[current]) caption.textContent = captions[current];
+    }
+
+        carousel.querySelector('.prev').addEventListener('click', () => goTo(current - 1));
+    carousel.querySelector('.next').addEventListener('click', () => goTo(current + 1));
+    dots.forEach(dot => dot.addEventListener('click', () => goTo(parseInt(dot.dataset.index))));
+  });
+</script>
+</body>
+</html>

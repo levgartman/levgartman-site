@@ -293,6 +293,72 @@
     line-height: 1.8;
     max-width: 600px;
   }
+  .project-desc + .project-desc { margin-top: 16px; }
+  .project-subhead {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 40px 0 14px;
+    font-weight: 500;
+  }
+  .project-kicker {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin: 40px auto;
+    text-align: center;
+    max-width: 600px;
+  }
+  .project-credits {
+    margin-top: 40px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.85;
+    max-width: 600px;
+  }
+  .project-credits p { margin: 0; }
+  .project-credits-label {
+    font-size: 0.66rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent-dim);
+    margin-bottom: 14px;
+  }
+  .project-expand {
+    margin-top: 28px;
+    max-width: 600px;
+  }
+  .project-expand summary {
+    cursor: pointer;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 12px 0;
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.2s;
+    font-weight: 500;
+  }
+  .project-expand summary::-webkit-details-marker { display: none; }
+  .project-expand summary::after {
+    content: '\2193';
+    display: inline-block;
+    transition: transform 0.3s;
+    font-size: 0.85rem;
+    letter-spacing: 0;
+  }
+  .project-expand[open] summary::after {
+    transform: rotate(180deg);
+  }
+  .project-expand summary:hover { color: var(--text); }
+  .project-expand-content { padding-top: 8px; }
   .project-tags {
     display: flex;
     flex-wrap: wrap;
@@ -327,6 +393,9 @@
   .carousel-track { display: flex; transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1); }
   .carousel-slide { min-width: 100%; position: relative; aspect-ratio: 16/9; background: var(--bg); }
   .carousel-slide iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+  .carousel.single-slide .carousel-controls { display: none; }
+  .project-poster { margin: 28px 0; display: flex; justify-content: center; }
+  .project-poster img { max-width: min(100%, 380px); height: auto; border: 1px solid var(--border); }
   .carousel-caption { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.06em; margin-top: 10px; padding: 0 2px; }
   .carousel-controls { display: flex; align-items: center; gap: 16px; margin-top: 14px; }
   .carousel-btn {
@@ -534,12 +603,69 @@
 </section>
 
 <section class="work" id="work">
-  <p class="section-label reveal">02 / Selected Work</p>
+  <p class="section-label reveal">02 / The Work</p>
   <p class="work-intro reveal">Launch campaigns, brand storytelling, and <strong>the rare project where you invent a new format</strong> and somehow it works.</p>
   <div class="projects">
 
     <div class="project reveal">
       <div class="project-num">01</div>
+      <div class="project-content">
+        <p class="project-eyebrow">Curious Refuge Curriculum, Final Project</p>
+        <h3 class="project-title">Marked Territory</h3>
+        <div class="project-poster">
+          <img src="/marked-territory-poster.png" alt="Marked Territory movie poster">
+        </div>
+        <p class="project-desc">A nervous dog sheriff faces her biggest adversary: a vacuum...with a knife. Marked Territory is a 1:45 claymation western set in a frontier town called Dogtown, starring my dog Luna. Final project for the Curious Refuge AI Animation curriculum.</p>
+        <div class="carousel single-slide" data-carousel>
+          <div class="carousel-track-wrap">
+            <div class="carousel-track">
+              <div class="carousel-slide"><iframe src="https://player.vimeo.com/video/1189499834" allowfullscreen loading="lazy"></iframe></div>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-btn prev">&#8592;</button>
+            <div class="carousel-dots">
+              <div class="carousel-dot active" data-index="0"></div>
+            </div>
+            <button class="carousel-btn next">&#8594;</button>
+            <span class="carousel-label" data-counter>1 / 1</span>
+          </div>
+          <p class="carousel-caption" data-caption>Marked Territory (2026)</p>
+        </div>
+        <details class="project-expand">
+          <summary>Read more</summary>
+          <div class="project-expand-content">
+            <p class="project-desc">I love telling stories about dogs, and I love working AI into production.</p>
+            <p class="project-desc">The process followed a traditional shape: script, then a character and environment sheet, then an animatic storyboard, then animation. About sixteen working days of actual production from blank page to finished short.</p>
+            <h4 class="project-subhead">The hard parts</h4>
+            <p class="project-desc">The shots that fought me hardest were the ones that asked the AI to reveal something the starting frame didn't already contain. A character starting with their eyes closed and then opening them (waking up), when the eyes weren't yet drawn. Walking through saloon doors into a saloon interior that didn't exist. Some were a challenge even when using an ending frame. The fix was sometimes more text description, and sometimes less. And sometimes just a lot of re-rolling.</p>
+            <p class="project-desc">Another fix when the physics of a shot were particularly difficult: generate the reverse action, then play it backward in Premiere.</p>
+            <h4 class="project-subhead">What stood out</h4>
+            <p class="project-desc">One delight: generating with a starting frame but no ending frame, and watching how the AI chose to "perform" the actor or move the camera. Plenty of misfires, but every so often a happy accident I'd never have thought to direct.</p>
+            <p class="project-desc">Another thing that surprised me was how much further these tools have come in a year. The last short I made in 2025 took noticeably more work for similar results. The capability curve is real and steep.</p>
+            <p class="project-desc">What hasn't changed: the things that make a short worth watching. A keen eye. A sense of humor. Twenty years of video production and editing telling you when a shot is working and when it isn't. The tools are catching up fast. The craft still has to lead.</p>
+            <p class="project-kicker">"Dogtown just ain't for suckers."</p>
+            <div class="project-credits">
+              <p class="project-credits-label">Credits</p>
+              <p>Story, direction, animation: Lev Gartman</p>
+              <p>Starring: Luna</p>
+              <p>Images and poster: Nano Banana, Photoshop</p>
+              <p>Video: Nano Banana, Veo (Google Flow), Kling (Freepik / Magnific)</p>
+              <p>Voices: ElevenLabs</p>
+              <p>Music and SFX: Envato</p>
+              <p>Edit: Adobe Premiere, After Effects</p>
+            </div>
+          </div>
+        </details>
+      </div>
+      <div class="project-meta">
+        <div class="project-metric">16</div>
+        <div class="project-metric-label">working days,<br>start to finish</div>
+      </div>
+    </div>
+
+    <div class="project reveal">
+      <div class="project-num">02</div>
       <div class="project-content">
         <p class="project-eyebrow">USA Network, Campaign</p>
         <h3 class="project-title">Mr. Robot: The Launch Experience</h3>
@@ -578,7 +704,7 @@
     </div>
 
     <div class="project reveal">
-      <div class="project-num">02</div>
+      <div class="project-num">03</div>
       <div class="project-content">
         <p class="project-eyebrow">NBCUniversal, Brand and Live Event</p>
         <h3 class="project-title">Bravo: From Network to Cultural Force</h3>
@@ -619,7 +745,7 @@
     </div>
 
     <div class="project reveal">
-      <div class="project-num">03</div>
+      <div class="project-num">04</div>
       <div class="project-content">
         <p class="project-eyebrow">USA Network, Franchise Campaigns</p>
         <h3 class="project-title">Suits, SVU and the Art of Staying #1</h3>
@@ -637,7 +763,7 @@
     </div>
 
     <div class="project reveal">
-      <div class="project-num">04</div>
+      <div class="project-num">05</div>
       <div class="project-content">
         <p class="project-eyebrow">Novo Nordisk, Video and Executive Content</p>
         <h3 class="project-title">High-Stakes Storytelling at Global Scale</h3>
@@ -656,7 +782,7 @@
     </div>
 
     <div class="project reveal">
-      <div class="project-num">05</div>
+      <div class="project-num">06</div>
       <div class="project-content">
         <p class="project-eyebrow">USA Network / NBC, Because Why Not</p>
         <h3 class="project-title">Dogs. Obviously.</h3>
@@ -767,10 +893,9 @@
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
   const carouselCaptions = [
+    ['Marked Territory (2026)'],
     ['eCoin Event: New York Comic-Con Activation', 'dec0d3d: Clio Award-Winning Documentary', 'Christian Slater EPK'],
     ['Bravo Moments Brand Spot', 'The Real Housewives Franchise', 'Potomac for Life ft. Nicki Minaj', 'BravoCon 2022 Same-Day Look Live'],
-    [],
-    [],
     ['Barknado', 'American Ninja Warrior: Puppy vs. Puppy', 'The Beverly Hills Dog Show']
   ];
 
